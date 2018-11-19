@@ -168,7 +168,7 @@ class TFDeepFMClassifier(object):
                         epoch, global_step, cur_loss))
             if cur_loss < best_loss:
                 best_loss = cur_loss
-                self.saver.save(sess, '{}/model'.format(self.chkpt_dir))
+        self.saver.save(sess, '{}/model'.format(self.chkpt_dir))
 
     def _build_graph(self):
         """
